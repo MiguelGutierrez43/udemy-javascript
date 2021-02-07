@@ -13,7 +13,17 @@ var miObjeto = {
     importante : true,
     texto : `Usuario ${user}`,
     miFuncion : (a,b) => a + b,
-    otroObjeto : persona
+    otroObjeto : persona,
+    fecha : new Date
 }
 
-console.log(miObjeto.otroObjeto.sexo)
+var {nombre} = miObjeto // destructuracion de un objeto
+
+var otraFuncion = ({texto},{otroObjeto}) => {
+
+    console.log(otroObjeto.sexo)
+    console.log(texto)
+}
+
+
+otraFuncion(miObjeto,miObjeto)
